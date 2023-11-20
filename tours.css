@@ -361,51 +361,29 @@
 }
  
  
- .thumbnail-grid ul {
-     display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
-     justify-content: space-between;
- }
-     
- .thumbnail-grid  {
-     /*added */
-    font: 1.2em/1.3 Helvetica, Arial, Verdana, sans-serif;
-    margin: 1em 3%;	
-    
-    /* center the page */
-    display: flex;	
-    justify-content: center;
-    gap:10px;
-    margin-bottom:120px;
-    overflow-x:scroll;
-    position:relative;
-    z-index:10;
+.scrollContainer_xwJ0
+{display:block;margin:32px 0 12px;width:100vw;}
+.samplesContainer_Uf1I{display:flex;gap:20px;margin-bottom:120px;overflow-x:scroll;position:relative;z-index:10;scroll-padding: 50% 0;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;}
+.samplesContainer_Uf1I::-webkit-scrollbar{width:12px;}
+.samplesContainer_Uf1I::-webkit-scrollbar-track{background:#18181800;border-radius:20px;margin:0 calc((100vw - Min(1100px,90vw))/ 2);}
+.samplesContainer_Uf1I::-webkit-scrollbar-thumb{background-color:#18181800;border:4px solid var(--ifm-background-color);border-radius:20px;}
+.samplesContainer_Uf1I:hover::-webkit-scrollbar-thumb{background-color:#18181833}.cardWrapper_Rzzi>div{margin-bottom:20px;width:320px;}
+.cardWrapper_Rzzi:first-child {padding-left:calc((100vw - Min(1100px,90vw))/ 2);}
+.cardWrapper_Rzzi:last-child {margin-right:0;padding-right:calc((100vw - Min(1100px,90vw))/ 2);}
 
-    /*margin-bottom:20px;
-    width:320px*/
- }
- 
-     
- .thumbnail-grid li {
-    width:32%;
- }
-
-/*new*/
-.thumbnail
-{
-    margin-bottom:20px;
-    /*width:320px;*/
-    position: relative;
+.cardWrapper_Rzzi {
+  margin-bottom: 20px;
+  width: 320px;
 }
-
-
 .container_pymw
 {
     background-color:#fff;
     border-radius:12px;
-    height:436px;
+    height:500px;
     position:relative;
+   
 }
 .image_wDq3
 {
@@ -413,7 +391,7 @@
   border-top-left-radius:12px;
   border-top-right-radius:12px;
   display:block;
-  height:200px;
+  height:250px;
   width:100%;
 }
 .information_Cb1b
@@ -436,11 +414,17 @@
 {
     color:#18181899;
     font-weight:450;
-    height:88px;
     margin-bottom:0;
     overflow:hidden;
     font-size:15px;
     line-height:22px;
+
+    min-height: 88px;
+		display: flex;
+		flex-direction: column;
+
+		max-height: 500px; /* Set a maximum height for the container */
+		overflow: auto; /* Enable vertical scrolling when the content overflows the max-height */
   }
 
     .domain_d9DS
@@ -461,6 +445,18 @@
         align-items:center;
         display:flex;
     }
+
+    .footer_TIvg {
+      gap: 8px;
+      justify-content: flex-start;
+      margin: auto 0 0;
+      align-items: center;
+      display: flex;
+  }
+
+  .relative {
+    position: relative;
+}
 
     .section_d76B {
         display: flex;
